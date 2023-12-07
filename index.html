@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detona Ralph</title>
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./src/style/reset.css">
+    <link rel="stylesheet" href="./src/style/main.css">
+</head>
+
+<body>
+    <main class="main__container">
+
+        <audio id="audio" src="" style="display: none;"></audio>
+
+        <!-- tela de Principal -->
+        <section class="menuScreen" id="mainScreen">
+            <div class="logo__container">
+                <img src="./src/images/detona1.png" alt="Logo Detona ralf com um pixel art no centro">
+            </div>
+            <div class="options__container" id="screens">
+                <button id="startGame" class="btn-start-game">
+                    iniciar
+                </button>
+                <button class="btn-start-game" id="btn-options">
+                    modo de jogo
+                </button>
+            </div>
+            <div class="footer">
+                <footer>2023 &copy; Desenvolvido por Taciara</footer>
+            </div>
+        </section>
+
+        <!-- Tela do jogo -->
+        <section class="gameScreen disabled-screen" id="gameScreen">
+            <div class="main__menu">
+                <div class="menu__time">
+                    <h2 style="color: red;">Time Left</h2>
+                    <h2 id="time-left">60</h2>
+                </div>
+                <div class="menu__score">
+                    <h2 style="color: red;"> Your Score</h2>
+                    <h2 id="score">0</h2>
+                </div>
+                <div class="menu__lives">
+                    <img src="./src/images/player.png" alt="pixel art de uma cabeça humana com boné"
+                        class="lives__img" />
+                    <h2>
+                        x<span id="lives"></span>
+                    </h2>
+                </div>
+            </div>
+            <div class="main__panel">
+                <div id="countStart" class="count-start">Começou!</div>
+                <div class="panel__row">
+                    <div class="row__square" id="1">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                    <div class="row__square" id="2">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                    <div class="row__square" id="3">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel__row">
+                    <div class="row__square" id="4">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                    <div class="row__square" id="5">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                    <div class="row__square" id="6">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel__row">
+                    <div class="row__square" id="7">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                    <div class="row__square" id="8">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                    <div class="row__square" id="9">
+                        <div class="target">
+                            <div class="target-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- tela de opções -->
+        <form id="optionsScreen" class="form-options disabled-screen">
+            <h1 title="options" class="title">Modo de jogo</h1>
+            <div>
+                <div class="option-group">
+                    <h3>Dificudade: </h3>
+                    <ol class="group-list" id="list-difficult">
+                        <li class="list-item">
+                            <label for="easy" class="option-label option-radio__checked">Fácil</label>
+                            <input type="radio" name="difficult" id="easy" class="option-radio" checked value="1">
+                        </li>
+                        <li class="list-item">
+                            <label for="medio" class="option-label">Médio</label>
+                            <input type="radio" name="difficult" id="medio" class="option-radio" value="2">
+                        </li>
+                        <li class="list-item">
+                            <label for="hard" class="option-label">Difícil</label>
+                            <input type="radio" name="difficult" id="hard" class="option-radio" value="3">
+                        </li>
+                    </ol>
+                </div>
+                <div class="option-group">
+                    <h3>Vidas: </h3>
+                    <ol class="group-list" id="list-lives">
+                        <li class="list-item">
+                            <label for="three" class="option-label option-radio__checked">3</label>
+                            <input type="radio" name="live" id="three" class="option-radio" value="3" checked>
+                        </li>
+                        <li class="list-item">
+                            <label for="five" class="option-label">5</label>
+                            <input type="radio" name="live" id="five" value="5" class="option-radio">
+                        </li>
+                        <li class="list-item">
+                            <label for="nine" class="option-label">9</label>
+                            <input type="radio" name="live" id="nine" value="9" class="option-radio">
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <button type="submit" id="btn-return" class="btn-start-game">Voltar</button>
+        </form>
+
+    </main>
+
+    <script defer src="./src/script/tela.js"></script>
+    <script defer src="./src/script/menu.js"></script>
+    <script defer src="./src/script/main.js"></script>
+</body>
+
+</html>

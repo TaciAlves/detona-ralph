@@ -1,0 +1,268 @@
+.main__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/wall.png') center;
+    text-transform: uppercase;
+}
+
+.logo__container img {
+    width: 80%;
+}
+
+button{
+    text-transform: uppercase;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 400px) {
+
+    .logo__container img {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 0.6rem;
+    }
+
+    .title{
+        font-size: 1.6rem;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .option-group{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding: 20px;
+    }
+}
+
+.main__menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 125px;
+    background-color: #000;
+    color: #fff;
+    border-bottom: 5px solid #ffd700;
+    padding: 16px 12px;
+}
+
+:is(.menu__time h2, .menu__score h2):nth-child(2){
+    margin-top: 1rem;
+}
+
+.main__panel{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.panel__row{
+    flex-direction: column;
+    display: flex;
+}
+
+.row__square{
+    width: 15vh;
+    height: 15vh;
+    border: 1px solid #000;
+    background-color: #5cd1e6;
+    cursor: pointer;
+    position: relative;
+}
+
+/* .target{
+    position: absolute;
+    display: none;
+    top: 10px;
+    left: 10px;
+    border: 3px solid #00c521;
+    border-radius: 50%;
+    width: 85%;
+    height: 85%;
+}
+
+.target-content{
+    position: relative;
+    width: 100%;
+    height: 4px;
+}
+
+.target-content::before, .target-content::after{
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #00c521;
+    top: 56px;
+    z-index: 1;
+}
+
+.target-content::before{
+    transform: rotate(45deg);
+}
+.target-content::after{
+    transform: rotate(135deg);
+} */
+
+.enemy{
+    background: url('../images/ralph.png') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    background-color: #175658;
+}
+
+.menu__lives{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lives__img{
+    width: 48px;
+}
+
+.menuScreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border-radius: 9px;
+    background-color: rgb(108, 35, 186);
+}
+
+.gameScreen{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(67, 0, 119);
+    width: 100%;
+    padding: 2rem;
+    margin: auto;
+}
+
+.option-group{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.group-list{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.25rem;
+    margin: 1.25rem 0; 
+    position: relative;
+}
+
+
+.option-label{
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.option-label:hover{
+    opacity: .8;
+    background-color: #14adad;
+    border-radius: 5px;
+    transition-duration: 400ms;
+    color: #fff;
+}
+
+.option-radio{
+    display: none;
+}
+.option-radio__checked{
+    color: #14adad;
+    border-bottom: 1px solid #fff;
+    border-radius: 5px;
+    text-shadow: 0 0 2px #000, 0 0 3px #000;
+}
+
+.btn-start-game{
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-start-game:hover{
+    cursor: pointer;
+    color: #14adad;
+    transition-duration: 400ms; 
+    border-bottom: 1px solid #fff;
+}
+
+.title{
+    color: #fff;
+}
+
+.disabled-screen{
+    display: none;
+}
+
+.count-start{
+    position: absolute;
+    color: #20fa18;
+    z-index: 1;
+    text-shadow: 6px 6px 5px #000;
+}
+
+.anim-count-start{
+    animation: anim-countStart 2000ms ease-out forwards;
+}
+
+@keyframes anim-countStart {
+    0%{
+        font-size: 10rem;
+        opacity: 1;
+    }
+    100%{
+        font-size: 0rem;
+        opacity: 0;
+    }
+}
